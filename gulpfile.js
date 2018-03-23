@@ -17,7 +17,8 @@ const ASSET_FOLDERS = ['./src/images/**/*', './src/fonts/**/*', './src/templates
 
 gulp.task('sass', () => {
     const sassConfig = {
-        outputStyle: argv.production ? 'compressed' : 'expanded'
+        outputStyle: argv.production ? 'compressed' : 'expanded',
+        includePaths: ['node_modules/breakpoint-sass/stylesheets/']
     };
 
     const autoprefixerConfig = {

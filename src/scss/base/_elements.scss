@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-smooth: always;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #1D1D1D;
+    font-family: $fontPrimary;
+    font-size: 1.6rem;
+}
+
+h1,
+h2 {
+    font-family: $fontSecondary;
+    font-weight: 800;
+}
+
+h1,
+h2 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+
+    @include breakpoint($tablet) {
+        font-size: 3.2rem;
+        line-height: 4rem;
+    }
+}
+
+p {
+    font: normal 1.6rem/2.5rem $fontPrimary;
+
+    @include breakpoint($tablet) {
+        font: normal 2rem/3.2rem $fontPrimary;
+    }
+
+    &.intro {
+        font: normal 1.9rem/2.6rem $fontSecondary;
+
+        @include breakpoint($tablet) {
+            font: normal 2.6rem/3.7rem $fontSecondary;
+        }
+    }
+}

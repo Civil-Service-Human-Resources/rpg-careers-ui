@@ -1,0 +1,26 @@
+.logo {
+    @include clearfix;
+    background: url(../images/crests/cabinet-office.svg) 10px top no-repeat;
+    background-size: auto 40px;
+    border-left: 3px solid $red;
+    color: #0b0c0c;
+    display: inline-block;
+    font: 400 24px/28px Helvetica, Arial;
+    padding: 42px 0 0 10px;
+    text-decoration: none;
+
+    &__text {
+        position: relative;
+        top: 5px;
+    }
+
+    &--horizontal {
+        background-position: 10px center;
+        background-size: 50px auto;
+        padding: 7px 10px 7px 70px;
+
+        .logo__text {
+            top: auto;
+        }
+    }
+}

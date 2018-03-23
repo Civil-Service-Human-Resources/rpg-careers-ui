@@ -1,0 +1,34 @@
+@mixin focus-state($offset: 0) {
+    background-color: transparent;
+    outline: 3px solid #ffbf47;
+    outline-offset: $offset;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after{
+        content: " ";
+        display: table;
+    }
+
+    &:after{
+        display: block;
+        clear: both;
+        height: 1px;
+        margin-top: -1px;
+        visibility: hidden;
+    }
+    & {
+        *zoom: 1;
+    }
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}

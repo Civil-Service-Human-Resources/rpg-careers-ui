@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install && gulp clean-dist && gulp sass --production && gulp copy-assets && gulp server"
+    "start": "npm install && gulp clean-dist && gulp sass --production && gulp copy-assets && gulp server",
+    "dev": "npm install && gulp clean-dist && gulp sass && gulp copy-assets && gulp server"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0",
     "gulp-webserver": "^0.9.1",
     "yargs": "^11.0.0"
   }

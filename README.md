@@ -14,8 +14,8 @@
 ## Compiling SASS
 `gulp sass`
 
-## Watching for SASS changes
-`gulp sass:dev`
+## Watching for changes
+`npm run dev`
 
 ## Creating a production version of CSS
 `npm run build`

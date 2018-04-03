@@ -10,7 +10,7 @@ const watch = require('gulp-watch');
 
 const SASS_ENTRY = './src/scss/screen.scss';
 const SASS_SRC = './src/scss/**/*.scss';
-const CSS_DEST = './dist/css';
+const CSS_DEST = './dist';
 const CSS_FILENAME = 'style.css';
 const MAPS_DEST = './maps';
 const ASSET_FOLDERS = ['./src/images/**/*', './src/fonts/**/*', './src/templates/*.html', './src/js/**/*'];
@@ -55,7 +55,7 @@ gulp.task('watch-files', () =>
 
 gulp.task('copy-assets', () =>
     gulp.src(ASSET_FOLDERS, {"base": "src"})
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./dist/assets'))
 );
 
 gulp.task('clean-dist', () =>
@@ -68,7 +68,10 @@ gulp.task('server', () =>
         .pipe(server({
             livereload: true,
             open: true,
-            fallback: './templates/index.html'
+            proxies: [
+                { source: './assets', target: 'http://localhost:8000/assets' }
+            ],
+            fallback: './assets/templates/index.html'
         }))
 );
 

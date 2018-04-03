@@ -14,6 +14,22 @@ body {
     font-size: 1.6rem;
 }
 
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+
+    &:visited {
+        color: #4c2c92;
+    }
+
+    &:link {
+        color: #005ea5;
+    }
+
+    &:focus {
+        @include focus-state();
+    }
+}
+
 h1,
 h2 {
     font-family: $fontSecondary;
@@ -24,25 +40,82 @@ h1,
 h2 {
     font-size: 2.4rem;
     line-height: 2.8rem;
+    margin: 0 0 30px 0;
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet_lrg) {
         font-size: 3.2rem;
         line-height: 4rem;
     }
 }
 
 p {
-    font: normal 1.6rem/2.5rem $fontPrimary;
+    font-family: $fontPrimary;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    margin: 0 0 20px 0;
 
-    @include breakpoint($tablet) {
-        font: normal 2rem/3.2rem $fontPrimary;
+    @include breakpoint($tablet_lrg) {
+        font-size: 2rem;
+        line-height: 3.2rem;
     }
 
     &.intro {
-        font: normal 1.9rem/2.6rem $fontSecondary;
+        font-family: $fontSecondary;
+        font-size: 1.9rem;
+        line-height: 2.9rem;
 
-        @include breakpoint($tablet) {
-            font: normal 2.6rem/3.7rem $fontSecondary;
+        @include breakpoint($tablet_lrg) {
+            font-size: 2.6rem;
+            line-height: 3.5rem;
         }
     }
+}
+
+blockquote {
+    p {
+        font-family: $fontSecondary;
+        font-size: 2.2rem;
+        line-height: 3rem;
+
+        @include breakpoint($tablet_lrg) {
+            font-size: 2.6rem;
+            line-height: 3.5rem;
+        }
+
+        &:after {
+            content: '"';
+        }
+
+        &:before {
+            content: '"'
+        }
+    }
+
+    footer {
+        font-size: 1.6rem;
+        line-height: 1.5;
+
+        &:before {
+            border-top: 6px solid;
+            content: '';
+            display: block;
+            height: 0;
+            margin-bottom: 20px;
+            width: 70px;
+        }
+
+        strong {
+            display: block;
+        }
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

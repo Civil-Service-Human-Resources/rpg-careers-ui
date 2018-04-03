@@ -1,7 +1,14 @@
 .masthead {
     @include clearfix;
-    height: 70px;
+    background-color: white;
+    height: 80px;
     padding: 30px 0;
+    position: relative;
+    z-index: 1001;
+
+    @include breakpoint($mobile_sml) {
+        height: 70px;
+    }
 
     @include breakpoint($tablet) {
         height: 80px;
@@ -9,34 +16,122 @@
 
     &__brand {
         float: left;
-        margin-left: 40px;
+        margin-left: 20px;
+
+        @include breakpoint($tablet) {
+            margin-left: 40px;
+        }
 
         .logo {
             float: left;
             position: relative;
-            top: -13px;
+            top: -7px;
+
+            @include breakpoint($tablet) {
+                top: -13px;
+            }
         }
 
         &-text {
+            clear: left;
             color: $defaultTextColor;
             float: left;
-            font: bold 2.4rem/3.6rem $fontSecondary;
-            margin-left: 30px;
+            font: bold 1.7rem/2.5rem $fontSecondary;
+            margin: -3px 0 5px 43px;
             position: relative;
-            top: -8px;
+            top: -6px;
+
+            @include breakpoint($mobile_sml) {
+                clear: none;
+                margin: 0 0 0 4px;
+            }
+
+            @include breakpoint($tablet) {
+                font-size: 2.6rem;
+                line-height: 3.6rem;
+                margin-left: 25px;
+                top: -8px;
+            }
+        }
+    }
+
+    &__toggle {
+        background: none;
+        border: 1px solid #979797;
+        border-radius: 28.5px;
+        color: $mobile-toggle-color;
+        cursor: pointer;
+        float: right;
+        font-family: $fontSecondary;
+        font-size: 1.4rem;
+        height: 38px;
+        line-height: 38px;
+        margin: -11px 20px 0 0;
+        padding: 0;
+        text-align: center;
+        text-transform: capitalize;
+        width: 90px;
+
+        &::after {
+            background: url(/assets/images/icons/chev-down.svg) center center no-repeat;
+            content:'';
+            display: inline-block;
+            height: 7px;
+            margin-left: 8px;
+            position: relative;
+            width: 14px;
+        }
+
+        @include breakpoint($tablet) {
+            margin-top: -7px;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px $orange;
+            outline: 0;
         }
     }
 
     &__nav {
-        @include breakpoint($tablet) {
+        @include clearfix;
+        position: relative;
+
+        @include breakpoint($tablet_lrg) {
             float: right;
             margin-top: 4px;
         }
 
+        ul {
+            background-color: #FFF;
+            max-height: 0;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            transition: max-height .2s linear;
+
+            @include breakpoint($tablet_lrg) {
+                overflow: visible;
+                position: relative;
+                top: auto;
+                max-height: none !important;
+            }
+        }
+
         li {
-            float: left;
+            border-top: 1px solid $mobile-nav-border-color;
             font-size: 1.6rem;
-            margin: 0 40px 0 0;
+
+            @include breakpoint($tablet_lrg) {
+                border: 0;
+                float: left;
+                margin: 0 30px 0 0;
+            }
+
+            @include breakpoint($desktop) {
+                margin-right: 40px;
+            }
 
             &.masthead__nav-current {
                 font-weight: bold;
@@ -45,7 +140,68 @@
 
         a {
             color: $defaultTextColor;
+            display: block;
+            padding: 20px;
             text-decoration: none;
+
+            &:active,
+            &:focus {
+                background-color: $orange;
+                outline: 0;
+            }
+
+            @include breakpoint($tablet_lrg) {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.mobile-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: all .6s ease-out;
+    width: 100%;
+    z-index: 1000;
+}
+
+.mobile-nav-open {
+
+    .mobile-overlay {
+        display: block;
+        opacity: 1;
+    }
+
+    .masthead__nav {
+        ul {
+            max-height: 999px;
+        }
+    }
+
+    .masthead__toggle {
+        &::after {
+            top: -2px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.no-js {
+    .masthead__nav {
+        ul {
+            @include breakpoint(max-width $tablet_lrg - 1px) {
+                clear: both;
+                left: auto;
+                max-height: 999px;
+                position: relative;
+                right: auto;
+                top: auto;
+            }
         }
     }
 }

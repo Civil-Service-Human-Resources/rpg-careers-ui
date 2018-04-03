@@ -23,6 +23,11 @@
     }
 }
 
+@mixin max-width-container {
+    margin: 0 auto;
+    max-width: $maxWidth + 40px;
+}
+
 .sr-only {
     border: 0;
     clip: rect(0 0 0 0);
@@ -31,4 +36,8 @@
     overflow: hidden;
     padding: 0;
     position: absolute;
+}
+
+.grid {
+    background: susy-svg-grid() no-repeat scroll;
 }

@@ -1,0 +1,59 @@
+.department-intro {
+    @include clearfix;
+    background-color: $intro-background;
+    margin-bottom: 30px;
+    padding: 20px 20px 40px;
+
+    @include breakpoint($mobile_lrg) {
+        margin-bottom: 70px
+    }
+
+    &__inner {
+        @include clearfix;
+        @include max-width-container;
+        position: relative;
+    }
+
+    p {
+        color: $intro-color;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__head {
+        margin-top: -70px;
+        position: relative;
+
+        @include breakpoint($mobile_lrg) {
+            @include column(5/12);
+            position: absolute;
+            margin-top: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__head-logo {
+        background-color: $intro-head-logo-background;
+        padding: 30px 25px;
+    }
+
+    &__head-title {
+        background-color: $intro-head-title-background;
+        margin: 0 0 25px;
+        padding: 20px 25px 25px;
+    }
+
+    &__content {
+
+        @include breakpoint($mobile_lrg) {
+            @include column(6/12, 6/12);
+        }
+
+        @include breakpoint($tablet) {
+            padding-bottom: 30px;
+            padding-top: 40px;
+        }
+    }
+}

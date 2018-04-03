@@ -1,0 +1,10 @@
+.image {
+    @include clearfix;
+    margin: 40px 0;
+
+    &--spaced {
+        @include breakpoint($tablet) {
+            padding-right: 50px;
+        }
+    }
+}

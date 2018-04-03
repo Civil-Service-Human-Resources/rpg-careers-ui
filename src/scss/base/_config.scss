@@ -1,9 +1,16 @@
 // breakpoints
+$mobile_sml: 360px;
 $mobile_lrg: 680px;
 $tablet: 768px;
+$tablet_lrg: 990px;
+$desktop: 1050px;
+
+// widths
+$maxWidth: 1040px;
 
 // pallette
 $white: #FFFFFF;
+$orange: #FFC861;
 $red: #B61E23;      // CS Brand Red
 $blue: #005ABB;     // Interaction Blue
 $grey1: #F3F3F3;    // Bg Grey Light
@@ -15,9 +22,20 @@ $grey6: #1D1D1D;    // Text Grey 1
 
 
 // colours
+$defaultFocusColor: $orange;
 $defaultTextColor: $grey6;
 $defaultLineColor: $grey2;
 
 // font families
 $fontPrimary: 'Adelle Sans';
 $fontSecondary: 'Adelle Web';
+
+// global elements
+$mobile-toggle-color: $grey6;
+$mobile-nav-border-color: $grey2;
+
+// departments
+$intro-background: $grey5;
+$intro-color: $white;
+$intro-head-title-background: $white;
+$intro-head-logo-background: $grey1;

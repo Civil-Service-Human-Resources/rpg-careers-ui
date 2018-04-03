@@ -1,0 +1,36 @@
+.aside {
+    @include clearfix;
+    margin: 0 0 50px;
+    padding-top: 20px;
+
+    @include breakpoint($tablet) {
+        padding-top: 40px;
+    }
+
+    &__inner {
+        background-color: #CFDEEB;
+        padding: 20px;
+
+        @include breakpoint($tablet) {
+            padding: 40px;
+        }
+    }
+
+    &__img {
+        margin: -20px -20px 20px;
+
+        @include breakpoint($mobile_lrg) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: -40px;
+        }
+
+        @include breakpoint($tablet) {
+            margin: -80px 0 40px 0;
+        }
+
+        @include breakpoint($tablet_lrg) {
+            margin-right: 40px;
+        }
+    }
+}

@@ -8,6 +8,9 @@ $desktop: 1050px;
 // widths
 $maxWidth: 1040px;
 
+// grid
+$gutter: 15px;
+
 // pallette
 $white: #FFFFFF;
 $orange: #FFC861;
@@ -25,6 +28,7 @@ $grey6: #1D1D1D;    // Text Grey 1
 $defaultFocusColor: $orange;
 $defaultTextColor: $grey6;
 $defaultLineColor: $grey2;
+$defaultLinkColor: $blue;
 
 // font families
 $fontPrimary: 'Adelle Sans';

@@ -1,0 +1,176 @@
+.slider {
+    @include clearfix;
+    @include max-width-container;
+    background-color: #CFDEEB;
+    margin-bottom: 50px;
+    overflow: hidden;
+    padding-bottom: 30px;
+    position: relative;
+
+    img {
+        border: 1px solid;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: $fontSecondary;
+        font-size: 1.9rem;
+        line-height: 2.9rem;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint($tablet_lrg) {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+        }
+    }
+
+    &__item {
+        cursor: grab;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        float: left;
+        height: 370px;
+        position: relative;
+        text-align: center;
+
+        &:focus,
+        &:active {
+            cursor: grabbing;
+            outline: 0;
+        }
+    }
+
+    &__item-content {
+        padding: 0 20%;
+        text-align: center;
+    }
+
+    &__item-icon {
+        background-color: #E0EBF4;
+        border-radius: 50%;
+        box-shadow: 9px 9px 0 0 #005192;
+        display: inline-block;
+        height: 100px;
+        margin-bottom: 40px;
+        padding-top: 18px;
+        text-align: center;
+        width: 100px;
+
+        svg {
+            height: 65px;
+            position: relative;
+            width: auto;
+
+            .fill-override {
+                fill: #005192;
+            }
+        }
+    }
+
+    &__next,
+    &__prev {
+        background-color: #CFDEEB;
+        border: 0;
+        cursor: pointer;
+        height: 100%;
+        position: absolute;
+        z-index: 800;
+        text-indent: -9999px;
+        top: 0;
+        width: 50px;
+
+        @include breakpoint($tablet) {
+            width: 70px;
+        }
+
+        &:after {
+            border: 3px solid #005ABB;
+            content: '';
+            display: block;
+            height: 30px;
+            position: absolute;
+            top: calc(50% - 11px);
+            width: 30px;
+        }
+
+        &:focus {
+            outline: 0;
+
+            &:after {
+                @include focus-state();
+            }
+        }
+
+        &:hover {
+            &:after {
+                border-color: darken(#005ABB, 20%);
+            }
+        }
+    }
+
+    &__next {
+        right: 0;
+
+        &:after {
+            border-top: 0;
+            border-left: 0;
+            left: -5px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__prev {
+
+        &:after {
+            border-top: 0;
+            border-right: 0;
+            right: -5px;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__nav {
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        text-align: center;
+
+        li {
+            display: inline;
+            margin: 0 4px;
+            padding: 5px 0;
+
+            &.slick-active {
+                button {
+                    background-color: #005192;
+                }
+            }
+        }
+
+        button {
+            background-color: $white;
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            height: 1rem;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            text-indent: -9999px;
+            width: 1rem;
+
+            &:focus {
+                box-shadow: 0 0 0 3px $orange;
+                outline: 0;
+            }
+
+            &:hover {
+                background-color: darken(#005192, 20%) !important;
+            }
+        }
+    }
+}

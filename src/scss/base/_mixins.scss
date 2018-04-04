@@ -28,6 +28,18 @@
     max-width: $maxWidth + 40px;
 }
 
+@mixin row() {
+    @include clearfix;
+    margin: 0 -#{$gutter};
+}
+
+@mixin column($width: 0, $pull: left) {
+    @include clearfix;
+    float: $pull;
+    margin: 0 $gutter;
+    width: calc(#{percentage($width)} - #{$gutter*2});
+}
+
 .sr-only {
     border: 0;
     clip: rect(0 0 0 0);
@@ -36,8 +48,4 @@
     overflow: hidden;
     padding: 0;
     position: absolute;
-}
-
-.grid {
-    background: susy-svg-grid() no-repeat scroll;
 }

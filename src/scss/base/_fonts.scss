@@ -1,47 +1,51 @@
 @font-face {
-    font-family: 'Adelle Web';
-    src: url('assets/fonts/AdelleWeb/AdelleWeb-ExtraBold.eot');
-    src: url('assets/fonts/AdelleWeb/AdelleWeb-ExtraBold.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/AdelleWeb/AdelleWeb-ExtraBold.woff2') format('woff2'),
-    url('assets/fonts/AdelleWeb/AdelleWeb-ExtraBold.woff') format('woff'),
-    url('assets/fonts/AdelleWeb/AdelleWeb-ExtraBold.ttf') format('truetype'),
-    url('assets/fonts/AdelleWeb/AdelleWeb-ExtraBold.svg#AdelleWeb-ExtraBold') format('svg');
+    font-family:'Adelle Web';
+    src: url('/assets/fonts/assets/fonts/AdelleWeb-ExtraBold.eot');
+    src: url('/assets/fonts/AdelleWeb-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/AdelleWeb-ExtraBold.woff2') format('woff2'),
+    url('/assets/fonts/AdelleWeb-ExtraBold.woff') format('woff'),
+    url('/assets/fonts/AdelleWeb-ExtraBold.ttf') format('truetype'),
+    url('/assets/fonts/AdelleWeb-ExtraBold.otf') format('opentype'),
+    url('/assets/fonts/AdelleWeb-ExtraBold.svg#AdelleWeb-ExtraBold') format('svg');
     font-weight: bold;
     font-style: normal;
+    font-stretch: normal;
 }
 
 @font-face {
-    font-family: 'Adelle Web';
-    src: url('assets/fonts/AdelleWeb/AdelleWeb-Light.eot');
-    src: url('assets/fonts/AdelleWeb/AdelleWeb-Light.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/AdelleWeb/AdelleWeb-Light.woff2') format('woff2'),
-    url('assets/fonts/AdelleWeb/AdelleWeb-Light.woff') format('woff'),
-    url('assets/fonts/AdelleWeb/AdelleWeb-Light.ttf') format('truetype'),
-    url('assets/fonts/AdelleWeb/AdelleWeb-Light.svg#AdelleWeb-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Adelle Sans';
-    src: url('assets/fonts/AdelleSansWeb/AdelleSans-Regular.eot');
-    src: url('assets/fonts/AdelleSansWeb/AdelleSans-Regular.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/AdelleSansWeb/AdelleSans-Regular.woff2') format('woff2'),
-    url('assets/fonts/AdelleSansWeb/AdelleSans-Regular.woff') format('woff'),
-    url('assets/fonts/AdelleSansWeb/AdelleSans-Regular.ttf') format('truetype'),
-    url('assets/fonts/AdelleSansWeb/AdelleSans-Regular.svg#AdelleSans-Regular') format('svg');
+    font-family:'Adelle Web';
+    src: url('/assets/fonts/AdelleWeb-Light.eot');
+    src: url('/assets/fonts/AdelleWeb-Light.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/AdelleWeb-Light.woff2') format('woff2'),
+    url('/assets/fonts/AdelleWeb-Light.woff') format('woff'),
+    url('/assets/fonts/AdelleWeb-Light.ttf') format('truetype'),
+    url('/assets/fonts/AdelleWeb-Light.otf') format('opentype'),
+    url('/assets/fonts/AdelleWeb-Light.svg#AdelleWeb-Light') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-stretch: normal;
 }
 
 @font-face {
-    font-family: 'Adelle Sans';
-    src: url('assets/fonts/AdelleSansWeb/AdelleSans-Bold.eot');
-    src: url('assets/fonts/AdelleSansWeb/AdelleSans-Bold.eot?#iefix') format('embedded-opentype'),
-    url('assets/fonts/AdelleSansWeb/AdelleSans-Bold.woff2') format('woff2'),
-    url('assets/fonts/AdelleSansWeb/AdelleSans-Bold.woff') format('woff'),
-    url('assets/fonts/AdelleSansWeb/AdelleSans-Bold.ttf') format('truetype'),
-    url('assets/fonts/AdelleSansWeb/AdelleSans-Bold.svg#AdelleSans-Bold') format('svg');
+    font-family:'Adelle Sans';
+    src: url('/assets/fonts/AdelleSansWeb-Bold.eot');
+    src: url('/assets/fonts/AdelleSansWeb-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/AdelleSansWeb-Bold.woff2') format('woff2'),
+    url('/assets/fonts/AdelleSansWeb-Bold.woff') format('woff'),
+    url('/assets/fonts/AdelleSansWeb-Bold.svg#AdelleSansWeb-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Adelle Sans';
+    src: url('/assets/fonts/AdelleSansWeb-Regular.eot');
+    src: url('/assets/fonts/AdelleSansWeb-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/AdelleSansWeb-Regular.woff2') format('woff2'),
+    url('/assets/fonts/AdelleSansWeb-Regular.woff') format('woff'),
+    url('/assets/fonts/AdelleSansWeb-Regular.svg#AdelleSansWeb-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
 }

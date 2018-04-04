@@ -30,7 +30,6 @@
     "yargs": "^11.0.0"
   },
   "dependencies": {
-    "breakpoint-sass": "^2.7.1",
-    "jeet": "^7.2.0"
+    "breakpoint-sass": "^2.7.1"
   }
 }

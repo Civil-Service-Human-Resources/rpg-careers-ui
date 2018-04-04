@@ -1,0 +1,20 @@
+#global-cookie-message {
+    width: 100%;
+    background-color: #d5e8f3;
+    display: none;
+    margin: 0;
+    padding: 1rem 2rem;
+
+    @include breakpoint($tablet) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+#global-cookie-message p {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 0;
+    padding: 0;
+}

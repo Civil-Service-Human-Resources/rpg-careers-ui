@@ -15,6 +15,17 @@ function debounce(func, wait, immediate) {
 
 $(document).ready(function () {
 
+    $('.slider').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 1,
+        dotsClass: 'slider__nav',
+        prevArrow: '<button type="button" class="slider__prev">Previous</button>',
+        nextArrow: '<button type="button" class="slider__next">Next</button>',
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
+
     var navClosedHtml = '<span class="sr-only">Open </span>menu';
     var navOpenHtml = 'Close <span class="sr-only"> Menu</span>';
     var navInitialized = false;

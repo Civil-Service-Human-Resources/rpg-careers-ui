@@ -1,5 +1,4 @@
 @import 'breakpoint';
-@import 'node_modules/jeet/scss/index';
 
 @import 'base/config';
 @import 'base/mixins';
@@ -11,9 +10,12 @@
 
 @import 'components/aside';
 @import 'components/banner';
+@import 'components/cookie-banner';
+@import 'components/cta';
 @import 'components/department-intro';
 @import 'components/image';
 @import 'components/masthead';
 @import 'components/skiplink';
+@import 'components/slider';
 
 @import 'layout/content-two-col';

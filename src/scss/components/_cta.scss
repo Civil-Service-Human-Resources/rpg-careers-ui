@@ -1,0 +1,20 @@
+.cta {
+    @include clearfix;
+    background-color: $white;
+    border: 1px solid $grey2;
+    margin-bottom: 40px;
+
+    &__content {
+        padding: 30px 30px 10px;
+    }
+
+    &__title {
+        font-family: $fontSecondary;
+        font-size: 2.4rem;
+        font-weight: 800;
+        line-height: 3.2rem;
+        margin-bottom: 20px;
+    }
+
+    &__img {}
+}

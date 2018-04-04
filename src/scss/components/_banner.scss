@@ -1,5 +1,14 @@
 .banner {
-    img {
-        width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+
+    @include breakpoint($mobile_lrg) {
+        height: 350px;
+    }
+
+    @include breakpoint($tablet_lrg) {
+        height: 500px;
     }
 }

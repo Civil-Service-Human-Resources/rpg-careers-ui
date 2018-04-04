@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    background-color: $grey1;
     color: #1D1D1D;
     font-family: $fontPrimary;
     font-size: 1.6rem;
@@ -16,17 +17,23 @@ body {
 
 a {
     -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+    color: $defaultLinkColor;
+    text-decoration: none;
 
     &:visited {
-        color: #4c2c92;
+        color: $defaultLinkColor;
     }
 
     &:link {
-        color: #005ea5;
+        color: $defaultLinkColor;
     }
 
     &:focus {
         @include focus-state();
+    }
+
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -75,8 +82,8 @@ p {
 blockquote {
     p {
         font-family: $fontSecondary;
-        font-size: 2.2rem;
-        line-height: 3rem;
+        font-size: 1.9rem;
+        line-height: 2.9rem;
 
         @include breakpoint($tablet_lrg) {
             font-size: 2.6rem;
@@ -118,4 +125,8 @@ strong {
 img {
     max-width: 100%;
     height: auto;
+}
+
+main {
+    padding: 0 20px;
 }

@@ -1,21 +1,24 @@
 .content-two-col {
-    padding: 0 20px;
+    @include max-width-container;
+    margin-bottom: 40px;
 
     &__inner {
         @include clearfix;
-        @include max-width-container;
+
+        @include breakpoint($mobile_lrg) {
+            @include row();
+        }
     }
 
     &__first {
         @include breakpoint($mobile_lrg) {
             @include column(6/12);
-            padding-right: 40px;
         }
     }
 
     &__last {
         @include breakpoint($mobile_lrg) {
-            @include column(6/12 6/12);
+            @include column(6/12);
         }
     }
 
@@ -23,6 +26,7 @@
         .content-two-col__first {
             @include breakpoint($mobile_lrg) {
                 @include column(7/12);
+                padding-right: 40px;
             }
         }
 

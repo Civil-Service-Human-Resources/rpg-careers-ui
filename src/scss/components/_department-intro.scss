@@ -8,6 +8,11 @@
         margin-bottom: 70px
     }
 
+    @include breakpoint($tablet) {
+        margin-right: -40px;
+        margin-left: -40px;
+    }
+
     &__inner {
         @include clearfix;
         @include max-width-container;

@@ -7,6 +7,10 @@
         padding-top: 40px;
     }
 
+    .aside__content {
+        overflow: hidden;
+    }
+
     &__inner {
         background-color: #CFDEEB;
         padding: 20px;
@@ -31,6 +35,29 @@
 
         @include breakpoint($tablet_lrg) {
             margin-right: 40px;
+        }
+    }
+
+    &--dark {
+        .aside__inner {
+            background-color: $grey5;
+            color: $white;
+        }
+    }
+
+    &--img-right {
+        @include breakpoint($tablet) {
+            padding-top: 0;
+            padding-right: 40px;
+        }
+
+        .aside__img {
+            @include breakpoint($tablet) {
+                float: right;
+                margin: 0 -100px 40px 20px;
+                padding: 0 20px 0 0;
+                width: 50%;
+            }
         }
     }
 }

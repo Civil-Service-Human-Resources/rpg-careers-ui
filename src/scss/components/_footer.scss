@@ -1,0 +1,130 @@
+.footer {
+    @include clearfix;
+    background-color: $white;
+    padding: 0 20px 20px;
+
+    @include breakpoint($tablet) {
+        padding: 0 40px;
+    }
+
+    a {
+        color: $grey4;
+        text-decoration: underline;
+
+        &:hover {
+            color: $grey6;
+        }
+    }
+
+    p {
+        color: $grey4;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+
+        @include breakpoint($tablet_lrg) {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+        }
+    }
+
+    h2 {
+        color: $grey6;
+        font-family: $fontPrimary;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        margin: 0;
+
+        @include breakpoint($tablet_lrg) {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+        }
+    }
+
+    &__inner {}
+
+    &__cta-btn {
+        margin-bottom: 30px;
+        padding: 30px 20px;
+        text-align: center;
+
+        @include breakpoint($tablet) {
+            border-bottom: 1px solid $grey2;
+            padding: 30px 20px;
+        }
+    }
+
+    &__nav-list {
+        margin-bottom: 20px;
+
+        @include breakpoint($mobile_lrg) {
+            margin-bottom: 40px;
+        }
+
+        a {
+            display: block;
+            padding: 15px 0;
+
+            @include breakpoint($mobile_lrg) {
+                display: inline;
+                padding: 0;
+            }
+        }
+    }
+
+    &__nav-item {
+        font-size: 1.4rem;
+        line-height: 2rem;
+
+        @include breakpoint($mobile_lrg) {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        @include breakpoint($tablet_lrg) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            margin-right: 30px;
+        }
+    }
+
+    &__closure {
+        @include breakpoint($tablet) {
+            @include row();
+        }
+    }
+
+    &__closure-first {
+
+        @include breakpoint($mobile_lrg) {
+            @include column(6/12, left, 0);
+        }
+
+        @include breakpoint($tablet) {
+            @include column(6/12);
+        }
+    }
+
+    &__closure-last {
+
+        @include breakpoint($mobile_lrg) {
+            @include column(6/12, left, 0);
+            text-align: right;
+        }
+
+        @include breakpoint($tablet) {
+            @include column(6/12);
+        }
+
+        p {
+            background: url(/assets/images/icons/open-government-licence.png) left top no-repeat;
+            padding-top: 25px;
+
+            @include breakpoint($mobile_lrg) {
+                background-position: right top;
+                float: right;
+                max-width: 400px;
+                padding-top: 20px;
+            }
+        }
+    }
+}

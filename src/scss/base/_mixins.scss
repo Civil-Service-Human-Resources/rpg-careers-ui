@@ -33,10 +33,10 @@
     margin: 0 -#{$gutter};
 }
 
-@mixin column($width: 0, $pull: left) {
+@mixin column($width: 0, $pull: left, $gutterSize: $gutter) {
     @include clearfix;
     float: $pull;
-    margin: 0 $gutter;
+    margin: 0 $gutterSize;
     width: calc(#{percentage($width)} - #{$gutter*2});
 }
 

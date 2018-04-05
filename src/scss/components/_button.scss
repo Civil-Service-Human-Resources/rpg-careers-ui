@@ -1,0 +1,30 @@
+.button {
+    background-color: $blue;
+    border-radius: 28.5px;
+    cursor: pointer;
+    display: block;
+    font-family: $fontSecondary;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin: 0;
+    padding: 20px;
+
+    @include breakpoint($mobile_lrg) {
+        border-radius: 30px;
+        display: inline-block;
+        font-size: 2rem;
+        padding: 15px 60px;
+    }
+
+    &:visited,
+    &:link,
+    &:focus,
+    &:hover {
+        color: $white !important;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: darken($blue, 10%);
+    }
+}

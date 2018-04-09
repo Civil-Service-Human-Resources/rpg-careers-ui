@@ -42,6 +42,10 @@ h2,
 h3 {
     font-family: $fontSecondary;
     font-weight: 800;
+
+    &.has-line {
+        @include decorateWithLine();
+    }
 }
 
 h1,
@@ -55,6 +59,19 @@ h2 {
         line-height: 4rem;
     }
 }
+
+h1 {
+    &.oversized {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+
+        @include breakpoint($tablet_lrg) {
+            font-size: 4.4rem;
+            line-height: 4.8rem;
+        }
+    }
+}
+
 h3 {
     font-family: $fontSecondary;
     font-size: 2rem;
@@ -89,6 +106,10 @@ p {
             line-height: 3.5rem;
         }
     }
+
+    a {
+        text-decoration: underline;
+    }
 }
 
 blockquote {
@@ -112,17 +133,10 @@ blockquote {
     }
 
     footer {
+        @include decorateWithLine(#005192, before, 15px);
         font-size: 1.6rem;
         line-height: 1.5;
-
-        &:before {
-            border-top: 6px solid #005192;
-            content: '';
-            display: block;
-            height: 0;
-            margin-bottom: 20px;
-            width: 70px;
-        }
+        margin-top: 20px;
 
         strong {
             display: block;

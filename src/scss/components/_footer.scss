@@ -88,6 +88,8 @@
     }
 
     &__closure {
+        @include clearfix;
+
         @include breakpoint($tablet) {
             @include row();
         }
@@ -107,12 +109,12 @@
     &__closure-last {
 
         @include breakpoint($mobile_lrg) {
-            @include column(6/12, left, 0);
+            @include column(6/12, right, 0);
             text-align: right;
         }
 
         @include breakpoint($tablet) {
-            @include column(6/12);
+            @include column(6/12, right);
         }
 
         p {

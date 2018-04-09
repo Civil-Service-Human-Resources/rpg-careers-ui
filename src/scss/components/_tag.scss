@@ -1,0 +1,18 @@
+.tag {
+    background-color: $red;
+    clear: both;
+    color: $white;
+    float: left;
+    font-family: $fontPrimary;
+    font-size: 1.6rem;
+    height: 30px;
+    letter-spacing: .5px;
+    line-height: 3.2rem;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding: 0 12px;
+
+    & + * {
+        clear: both;
+    }
+}

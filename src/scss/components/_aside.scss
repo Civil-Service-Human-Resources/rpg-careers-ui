@@ -38,10 +38,25 @@
         }
     }
 
-    &--dark {
+    &--secondary {
         .aside__inner {
             background-color: $grey5;
             color: $white;
+        }
+    }
+
+    &--tertiary {
+        .aside__inner {
+            background-color: $red;
+            color: $white;
+        }
+
+        blockquote {
+            footer {
+                &:before {
+                    border-color: $redDark;
+                }
+            }
         }
     }
 

@@ -1,0 +1,56 @@
+.hero {
+    @include clearfix;
+    background-color: #C1CDCD;
+
+    @include breakpoint($mobile_lrg) {
+        margin-bottom: 70px;
+    }
+
+    &__inner {
+        @include max-width-container;
+
+        @include breakpoint($mobile_lrg) {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0 20px;
+        }
+    }
+
+    &__img {
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 85% auto;
+        min-height: 300px;
+
+        @include breakpoint($mobile_lrg) {
+            background-size: 100% auto;
+            flex: 1;
+        }
+
+        @include breakpoint($tablet) {
+            background-size: auto 80%;
+            min-height: 400px;
+        }
+
+        @include breakpoint($tablet_lrg) {
+            background-size: 100% auto;
+            min-height: 650px;
+        }
+    }
+
+    &__content {
+        @include clearfix;
+        background-color: $grey1;
+        padding: 40px 20px 10px;
+
+        @include breakpoint($mobile_lrg) {
+            background-color: transparent;
+            flex-basis: 46%;
+            padding-bottom: 60px;
+        }
+
+        @include breakpoint($tablet) {
+            padding: 90px 30px 60px 20px;
+        }
+    }
+}

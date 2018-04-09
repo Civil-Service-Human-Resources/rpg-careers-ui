@@ -1,6 +1,6 @@
 .image {
     @include clearfix;
-    margin: 40px 0;
+    margin: 0 0 40px;
 
     &--spaced {
         @include breakpoint($tablet) {

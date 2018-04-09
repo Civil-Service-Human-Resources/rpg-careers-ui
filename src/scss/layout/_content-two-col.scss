@@ -22,6 +22,20 @@
         }
     }
 
+    &--reversed {
+        .content-two-col__first {
+            @include breakpoint($mobile_lrg) {
+                float: right;
+            }
+        }
+
+        .content-two-col__last {
+            @include breakpoint($mobile_lrg) {
+                float: left;
+            }
+        }
+    }
+
     &--stacked-left {
         .content-two-col__first {
             @include breakpoint($mobile_lrg) {

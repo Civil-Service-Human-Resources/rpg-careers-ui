@@ -8,6 +8,7 @@
     line-height: 1.4;
     margin: 0;
     padding: 20px;
+    text-align: center;
 
     @include breakpoint($mobile_lrg) {
         border-radius: 30px;
@@ -26,5 +27,15 @@
 
     &:hover {
         background-color: darken($blue, 10%);
+    }
+
+    &--smaller {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @include breakpoint($mobile_lrg) {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
     }
 }

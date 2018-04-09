@@ -40,6 +40,22 @@
     width: calc(#{percentage($width)} - #{$gutter*2});
 }
 
+@mixin decorateWithLine($color: $red, $position: after, $marginBottom: 0) {
+    &:#{$position} {
+        border-top: 4px solid $red;
+        content: '';
+        display: block;
+        height: 0;
+        margin-bottom: $marginBottom;
+        margin-top: 15px;
+        width: 70px;
+
+        @include breakpoint($tablet) {
+            border-width: 7px;
+        }
+    }
+}
+
 .sr-only {
     border: 0;
     clip: rect(0 0 0 0);

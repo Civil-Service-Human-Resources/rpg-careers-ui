@@ -6,12 +6,13 @@
 
     <title>Civil Service Careers | UI</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 
     <script src="/assets/js/vendor/modernizr/modernizr-custom.js"></script>
 
     <!--[if lt IE 9]>
         <script src="/assets/js/vendor/respond/src/respond.js"></script>
+        <script src="/assets/js/vendor/rem/rem.js"></script>
     <![endif]-->
 
 </head>
@@ -36,8 +37,8 @@
         </div>
         <nav class="masthead__nav">
             <ul class="masthead__menu" id="nav">
-                <li><a href="">Home</a></li>
-                <li class="masthead__nav-current"><a href="">Departments</a></li>
+                <li class="masthead__nav-current"><a href="">Home</a></li>
+                <li><a href="">Departments</a></li>
                 <li><a href="">About the Civil Service</a></li>
                 <li><a href="">Areas of Work</a></li>
             </ul>
@@ -45,184 +46,75 @@
     </header>
     <!-- /masthead -->
 
-    <!-- banner -->
-    <div class="banner">
-        <style type="text/css">
-            .banner {
-                background-image: url(https://placebear.com/800/500);
-            }
-            @media (min-width: 768px) {
-                .banner {
-                    background-image: url(https://placebear.com/1400/600);
-                }
-            }
-        </style>
+    <!-- hero -->
+    <div class="hero">
+        <div class="hero__inner">
+            <div class="hero__img" style="background-image: url(/assets/images/hero-banner-arms.png)"></div>
+            <div class="hero__content">
+                <h1 class="oversized has-line">Discover careers in the Civil Service</h1>
+                <p class="intro">The Civil Service is changing. We’re finding new ways to serve the public, work more efficiently and make government more transparent. And we’re making the Civil Service a truly great place to work.</p>
+            </div>
+        </div>
     </div>
-    <!-- /banner -->
+    <!-- /hero -->
 
     <main id="content" role="main">
 
-        <!-- department-intro -->
-        <div class="department-intro">
-            <div class="department-intro__inner">
-                <div class="department-intro__head">
-                    <div class="department-intro__head-logo">
-                        <span class="logo">
-                        <span class="logo__text">Department for<br />Business, Energy<br />&amp; Industrial Strategy</span>
-                    </span>
-                    </div>
-                    <h1 class="department-intro__head-title">Working for the Department of max content quantity for this H1 page element</h1>
-                </div>
-                <div class="department-intro__content">
-                    <p class="intro">We know the value of arts, culture and sport – preserving our heritage and supporting the next generation who’ll keep the UK punching way above its weight. Our staff share this passion: we believe in the ability of digital media, culture and sport to change lives – and bring communities together.</p>
-                </div>
-            </div>
-        </div>
-        <!-- /department-intro -->
-
-        <!-- two-col-stacked-content-left -->
-        <div class="content-two-col content-two-col--stacked-left">
-            <div class="content-two-col__inner">
-                <div class="content-two-col__first">
-                    <h2>H2 Set expectations for para copy</h2>
-                    <p>Nam a dolor at velit tincidunt dictum. Proin congue sed tortor finibus placerat. Curabitur viverra sed elit eu sollicitudin. Aliquam a enim ut quam feugiat luctus. Phasellus et magna ac mauris volutpat vulputate eget pharetra ipsum. Vestibulum eu auctor velit. Duis fermentum mattis nulla, ac semper sem iaculis a.</p>
-                    <p>Sed facilisis, tellus quis malesuada placerat, arcu lacus efficitur sem, eget dapibus urna ligula in massa. Praesent dictum consequat velit nec cursus. Vivamus sollicitudin porttitor sagittis. Vestibulum id ipsum leo. Nulla vulputate lacus neque. Suspendisse pulvinar.</p>
-
-                    <div class="image image--spaced">
-                        <img src="https://placebear.com/900/600" alt="Image alt here">
-                    </div>
-
-                    <p>Proin euismod est nec nulla viverra, sed feugiat odio suscipit. Suspendisse quam elit, condimentum vitae consectetur sit amet, mattis ut leo. Morbi ultrices tempor pulvinar. Aenean gravida cursus nisi, at venenatis nisl tincidunt sed. Nulla sagittis lectus velit, ac pharetra orci facilisis egestas. Ut pellentesque dignissim lacus id dignissim. Nulla eget sollicitudin lectus.</p>
-                </div>
-                <div class="content-two-col__last">
-
-                    <div class="aside aside--img-top">
-                        <div class="aside__inner">
-                            <div class="aside__img">
-                                <img src="https://placebear.com/900/600" alt="Image alt here">
-                            </div>
-                            <blockquote class="aside__content">
-                                <p>Lorem ipsum general story about the dept I work in and how the culture is great and my background implicitly demonstrates our commitment to diversity instead of just saying it.</p>
-                                <footer>Firstname Longnamerson <strong>Jobtitleis Areallylongonehere</strong></footer>
-                            </blockquote>
-                        </div>
-                    </div>
-
-                    <div class="image">
-                        <img src="https://placebear.com/900/600" alt="Image alt here">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- /two-col-stacked-content-left -->
-
-        <!-- slider -->
-        <div class="slider">
-            <div class="slider__item">
-                <div class="slider__item-content">
-                    <div class="slider__item-icon">
-                        <?xml version="1.0" encoding="UTF-8"?>
-                        <svg version="1.1" viewBox="0 0 47 66" xmlns="http://www.w3.org/2000/svg">
-                            <title>lightbulb</title>
-                            <desc>Created with Sketch.</desc>
-                            <g fill="none" fill-rule="evenodd">
-                                <g transform="translate(-300 -2406)">
-                                    <g transform="translate(300 2405)">
-                                        <g transform="translate(.30405 .58503)">
-                                            <ellipse cx="23.099" cy="31.058" rx="15.832" ry="15.847" class="fill-override" />
-                                            <path d="m23.099 0.66378c-12.737 0-23.099 10.389-23.099 23.153 0 12.309 9.6364 22.374 21.74 23.088v-11.628l-1.7555 1.7624c-0.53264 0.52844-1.3914 0.52844-1.924 0l-4.0763-4.0859c-0.52992-0.53117-0.52992-1.3946 0-1.9258 0.53264-0.53389 1.3914-0.53389 1.924 0l3.1143 3.1216 3.1143-3.1216c0.12229-0.12258 0.27447-0.22609 0.44296-0.29146 0.33154-0.13892 0.70384-0.13892 1.0354 0 0.16849 0.065374 0.32067 0.16888 0.44567 0.29146l3.1143 3.1216 3.1143-3.1216c0.53264-0.53389 1.3914-0.53389 1.924 0 0.52992 0.53117 0.52992 1.3946 0 1.9258l-4.0763 4.0859c-0.26632 0.26422-0.61416 0.39769-0.962 0.39769-0.34784 0-0.69569-0.13347-0.962-0.39769l-1.7555-1.7624v11.628c12.101-0.71367 21.74-10.779 21.74-23.088 0-12.764-10.362-23.153-23.099-23.153" fill="#fff"/>
-                                            <path d="m29.804 49.503h-13.41c-0.74021 0-1.341 0.58191-1.341 1.2989 0 0.717 0.60075 1.2989 1.341 1.2989h13.41c0.73752 0 1.341-0.58191 1.341-1.2989 0-0.717-0.60343-1.2989-1.341-1.2989" class="fill-override"/>
-                                            <path d="m29.804 54.699h-13.41c-0.74021 0-1.341 0.58191-1.341 1.2989s0.60075 1.2989 1.341 1.2989h13.41c0.73752 0 1.341-0.58191 1.341-1.2989s-0.60343-1.2989-1.341-1.2989" class="fill-override"/>
-                                            <path d="m29.804 59.894h-13.41c-0.74021 0-1.341 0.6401-1.341 1.4288s0.60075 1.4288 1.341 1.4288h5.3638v1.4288c0 0.7887 0.60075 1.4288 1.341 1.4288 0.73752 0 1.341-0.6401 1.341-1.4288v-1.4288h5.3638c0.73752 0 1.341-0.6401 1.341-1.4288s-0.60343-1.4288-1.341-1.4288" class="fill-override"/>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                    <p>This is one of three interesting facts which rotate on a carousel. Yes, a carousel - I am a bad myan.</p>
-                </div>
-            </div>
-            <div class="slider__item">
-                <div class="slider__item-content">
-                    <div class="slider__item-icon">
-                        <?xml version="1.0" encoding="UTF-8"?>
-                        <svg version="1.1" viewBox="0 0 47 66" xmlns="http://www.w3.org/2000/svg">
-                            <title>lightbulb</title>
-                            <desc>Created with Sketch.</desc>
-                            <g fill="none" fill-rule="evenodd">
-                                <g transform="translate(-300 -2406)">
-                                    <g transform="translate(300 2405)">
-                                        <g transform="translate(.30405 .58503)">
-                                            <ellipse cx="23.099" cy="31.058" rx="15.832" ry="15.847" class="fill-override" />
-                                            <path d="m23.099 0.66378c-12.737 0-23.099 10.389-23.099 23.153 0 12.309 9.6364 22.374 21.74 23.088v-11.628l-1.7555 1.7624c-0.53264 0.52844-1.3914 0.52844-1.924 0l-4.0763-4.0859c-0.52992-0.53117-0.52992-1.3946 0-1.9258 0.53264-0.53389 1.3914-0.53389 1.924 0l3.1143 3.1216 3.1143-3.1216c0.12229-0.12258 0.27447-0.22609 0.44296-0.29146 0.33154-0.13892 0.70384-0.13892 1.0354 0 0.16849 0.065374 0.32067 0.16888 0.44567 0.29146l3.1143 3.1216 3.1143-3.1216c0.53264-0.53389 1.3914-0.53389 1.924 0 0.52992 0.53117 0.52992 1.3946 0 1.9258l-4.0763 4.0859c-0.26632 0.26422-0.61416 0.39769-0.962 0.39769-0.34784 0-0.69569-0.13347-0.962-0.39769l-1.7555-1.7624v11.628c12.101-0.71367 21.74-10.779 21.74-23.088 0-12.764-10.362-23.153-23.099-23.153" fill="#fff"/>
-                                            <path d="m29.804 49.503h-13.41c-0.74021 0-1.341 0.58191-1.341 1.2989 0 0.717 0.60075 1.2989 1.341 1.2989h13.41c0.73752 0 1.341-0.58191 1.341-1.2989 0-0.717-0.60343-1.2989-1.341-1.2989" class="fill-override"/>
-                                            <path d="m29.804 54.699h-13.41c-0.74021 0-1.341 0.58191-1.341 1.2989s0.60075 1.2989 1.341 1.2989h13.41c0.73752 0 1.341-0.58191 1.341-1.2989s-0.60343-1.2989-1.341-1.2989" class="fill-override"/>
-                                            <path d="m29.804 59.894h-13.41c-0.74021 0-1.341 0.6401-1.341 1.4288s0.60075 1.4288 1.341 1.4288h5.3638v1.4288c0 0.7887 0.60075 1.4288 1.341 1.4288 0.73752 0 1.341-0.6401 1.341-1.4288v-1.4288h5.3638c0.73752 0 1.341-0.6401 1.341-1.4288s-0.60343-1.4288-1.341-1.4288" class="fill-override"/>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                    <p>This is one of three interesting facts which rotate on a carousel.</p>
-                </div>
-            </div>
-        </div>
-        <!-- /slider -->
-
         <!-- two-col-even -->
-        <div class="content-two-col content-two-col--two-thirds-left">
+        <div class="content-two-col content-two-col--reversed">
             <div class="content-two-col__inner">
                 <div class="content-two-col__first">
-                    <div class="aside aside--img-right aside--dark">
+                    <h2>Our Departments</h2>
+                    <p>Running the UK is complicated. That’s why the Civil Service is divided into departments, which deal with areas such as education, health and defence. A lot of departments will have their own agencies dealing with specialist subjects. </p>
+                    <p>Whatever your passion – from the environment to culture, there’s a department or agency to match.</p>
+                    <p><a href="#" class="button button--smaller">Discover Departments</a></p>
+                </div>
+                <div class="content-two-col__last">
+                    <div class="aside aside--img-top aside--tertiary">
                         <div class="aside__inner">
                             <div class="aside__img">
-                                <img src="https://placebear.com/900/600" alt="Image alt here">
+                                <img src="http://via.placeholder.com/900x600?text=Placeholder image" alt="Image alt here">
                             </div>
                             <blockquote class="aside__content">
-                                <p>At [dept xyz] I found that career development opportunities opened a lot of lorem lorem ipsum dolor sit amet, adipiscing elit. In mollis at quam.</p>
-                                <footer>Firstname Longnamerson <strong>Jobtitleis Areallylongonehere</strong></footer>
+                                <p>Being an HMRC apprentice means I get to work with lots of really skilled people and to soak up knowledge and learn from them.</p>
+                                <footer>Joe Powell <strong>HMRC Digital Delivery Centres,<br />Shipley</strong></footer>
                             </blockquote>
                         </div>
                     </div>
-                </div>
-                <div class="content-two-col__last">
-                    <p>We’ll give you the opportunity to use your skills and talents to build a rewarding career. From the moment you join, you’ll be able to identify your goals and tap into the huge variety of free training we offer: last year, x,000 of our people gained qualifications or training with us. And if you want to broaden your experience even further, you can use the rapidly improving links across government to do this.</p>
                 </div>
             </div>
         </div>
         <!-- /two-col-even -->
 
-        <!-- two-col two thirds -->
+        <!-- two-col-even -->
         <div class="content-two-col">
-
-            <!-- section-intro-->
-            <div class="section-intro">
-                <h2>Wherye we’re headed</h2>
-                <p>This para gives some context for the news items below and how they’re relevant in demonstrating our aspirations and achievments that you might buy into.</p>
-            </div>
-            <!-- /section-intro-->
-
             <div class="content-two-col__inner">
                 <div class="content-two-col__first">
-                    <div class="cta">
-                        <img class="cta__img" src="https://placebear.com/900/600" alt="Image alt here">
-                        <div class="cta__content">
-                            <h3 class="cta__title"><a href="">Bettys &amp; Taylors of Harrogate win their third Queen's Award for Sustainable Development</a></h3>
-                            <p>Three-time winners of the of the Award for Sustainable Development, Bettys & Taylors explain what winning a Queen's Award has meant to them this represents max preview copy.</p>
-                        </div>
+                    <h2>Our Professions</h2>
+                    <p>Every Civil Service job is also part of a ‘profession’ – everything from legal and IT to HR or service delivery. Your profession offers networking opportunities and training and development programmes – plus the chance to work on major cross-government projects.</p>
+                    <p><a href="#" class="button button--smaller">Discover Professions</a></p>
+                </div>
+                <div class="content-two-col__last">
+                    <div class="image">
+                        <img src="http://via.placeholder.com/900x600?text=Placeholder image" alt="Image alt here">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /two-col-even -->
+
+        <!-- two-col-even -->
+        <div class="content-two-col">
+            <div class="content-two-col__inner">
+                <div class="content-two-col__first">
+                    <div class="image">
+                        <img src="http://via.placeholder.com/900x600?text=Placeholder image" alt="Image alt here">
                     </div>
                 </div>
                 <div class="content-two-col__last">
-                    <div class="cta">
-                        <img class="cta__img" src="https://placebear.com/900/600" alt="Image alt here">
-                        <div class="cta__content">
-                            <h3 class="cta__title"><a href="">This is a short title</a></h3>
-                            <p>Example shorter content will work on a concept for a future European mission to help reduce the global risk of damage caused by space weather.</p>
-                        </div>
-                    </div>
+                    <span class="tag">Latest</span>
+                    <h2><a href="#">Bringing digital transformation to culture: be part of the revolution</a></h2>
+                    <p>The way people consume arts and culture is changing. The Department for Digital, Culture, Media & Sport (DCMS) is evolving to meet this challenge, and we need talent to help us get there. Find our more about <a href="#">working for DCMS</a>.</p>
                 </div>
             </div>
         </div>

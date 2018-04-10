@@ -67,11 +67,10 @@ gulp.task('server', () =>
     gulp.src('dist')
         .pipe(server({
             livereload: true,
-            open: true,
+            open: 'http://localhost:8000/assets/templates/',
             proxies: [
                 { source: './assets', target: 'http://localhost:8000/assets' }
-            ],
-            fallback: './assets/templates/index.html'
+            ]
         }))
 );
 

@@ -1,6 +1,7 @@
 .hero {
     @include clearfix;
     background-color: #C1CDCD;
+    position: relative;
 
     @include breakpoint($mobile_lrg) {
         margin-bottom: 70px;
@@ -51,6 +52,61 @@
 
         @include breakpoint($tablet) {
             padding: 90px 30px 60px 20px;
+        }
+    }
+
+    &--where-to-find {
+        margin: 0 -20px 25px;
+
+        @include breakpoint($tablet) {
+            margin: 0 -40px 50px;
+        }
+
+        .hero__inner {
+            min-height: 650px;
+
+            @include breakpoint($mobile_lrg) {
+                flex-direction: row;
+            }
+        }
+        .hero__img {
+            background-position: center 70px;
+            background-size: auto 433px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 399;
+
+            @include breakpoint($mobile_lrg) {
+                background-position: top -250px right -50px;
+                background-size: auto 150%;
+            }
+
+            @include breakpoint($desktop) {
+                background-position: top -250px right 50px;
+            }
+
+            @include breakpoint($desktop_lrg) {
+                background-position: top -250px left 70%;
+            }
+        }
+
+        .hero__content {
+            background-color: transparent;
+            padding-bottom: 0;
+            padding-top: 30px;
+            z-index: 400;
+
+            h2 {
+                margin-bottom: 465px;
+
+                @include breakpoint($mobile_lrg) {
+                    margin-bottom: 20px;
+                    margin-top: 100px;
+                }
+            }
         }
     }
 }

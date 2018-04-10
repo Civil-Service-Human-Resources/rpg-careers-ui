@@ -56,6 +56,7 @@
     }
 
     &--where-to-find {
+        background-color: #D4DBDB;
         margin: 0 -20px 25px;
 
         @include breakpoint($tablet) {
@@ -107,6 +108,69 @@
                     margin-top: 100px;
                 }
             }
+        }
+    }
+}
+
+.hero-text {
+    @include clearfix;
+    padding: 0 20px;
+    position: relative;
+
+    @include breakpoint($tablet) {
+        padding: 0 40px;
+    }
+
+    &__inner {
+        @include max-width-container;
+        padding-top: 30px;
+        position: relative;
+        margin-bottom: 40px;
+
+        @include breakpoint($mobile_lrg) {
+            padding-top: 70px;
+        }
+    }
+
+    &__title {
+        background-color: $red;
+        color: $white;
+        margin-bottom: 40px;
+        padding: 25px 35px 25px 25px;
+        position: relative;
+        z-index: 501;
+
+        @include breakpoint($mobile_lrg) {
+            width: 55%;
+        }
+
+        @include breakpoint($tablet_lrg) {
+            padding: 45px 70px 45px 50px;
+        }
+    }
+
+    &__text {
+        @include decorateWithLine($red, after, 50px);
+        z-index: 501;
+        position: relative;
+
+        @include breakpoint($mobile_lrg) {
+            width: 40%;
+        }
+
+        @include breakpoint($tablet_lrg) {
+            width: 40%;
+        }
+    }
+
+    &__img {
+        @include breakpoint($mobile_lrg) {
+            margin-top: 40px;
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 500;
         }
     }
 }

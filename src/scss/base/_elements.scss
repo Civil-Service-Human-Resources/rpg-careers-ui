@@ -87,6 +87,19 @@ h3,
     }
 }
 
+li {
+    font-family: $fontPrimary;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    margin: 0 0 10px 0;
+
+    @include breakpoint($tablet_lrg) {
+        font-size: 2rem;
+        line-height: 3.2rem;
+    }
+}
+
 p {
     font-family: $fontPrimary;
     font-size: 1.6rem;

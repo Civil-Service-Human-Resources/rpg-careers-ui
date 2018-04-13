@@ -40,6 +40,10 @@
     width: calc(#{percentage($width)} - #{$gutter*2});
 }
 
+@mixin decorateWithTopBorder($color: $red) {
+    border-top: 6px solid $color;
+}
+
 @mixin decorateWithLine($color: $red, $position: after, $marginBottom: 0) {
     &:#{$position} {
         border-top: 4px solid $red;

@@ -1,0 +1,30 @@
+.content-three-col {
+    @include max-width-container;
+    margin-bottom: 40px;
+
+    &__inner {
+        @include clearfix;
+
+        @include breakpoint($mobile_lrg) {
+            @include row();
+        }
+    }
+
+    &__first {
+        @include breakpoint($mobile_lrg) {
+            @include column(4/12);
+        }
+    }
+
+    &__middle {
+        @include breakpoint($mobile_lrg) {
+            @include column(4/12);
+        }
+    }
+
+    &__last {
+        @include breakpoint($mobile_lrg) {
+            @include column(4/12);
+        }
+    }
+}

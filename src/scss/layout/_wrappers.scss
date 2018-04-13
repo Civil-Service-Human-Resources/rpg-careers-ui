@@ -1,0 +1,20 @@
+.wrapper {
+    @include clearfix;
+
+    &__inner {
+        @include max-width-container;
+        padding: 50px 25px 0;
+        margin-bottom: 40px;
+
+        @include breakpoint($tablet) {
+            padding: 50px 50px 0;
+        }
+    }
+
+    &--secondary {
+        .wrapper__inner {
+            background-color: $grey6;
+            color: #fff;
+        }
+    }
+}

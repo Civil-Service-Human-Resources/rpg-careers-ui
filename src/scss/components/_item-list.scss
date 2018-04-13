@@ -1,0 +1,23 @@
+.item-list {
+    @include clearfix;
+    text-align: center;
+
+    &__item {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        position: relative;
+
+        &:after {
+            border-top: 2px solid $red;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 0;
+            left: calc(50% - 20px);
+            opacity: .31;
+            overflow: hidden;
+            position: absolute;
+            width: 40px;
+        }
+    }
+}

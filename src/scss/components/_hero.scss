@@ -163,6 +163,12 @@
         }
     }
 
+    &__title--alt {
+        @include decorateWithTopBorder;
+        background-color: $white;
+        color: $grey6;
+    }
+
     &__img {
         @include breakpoint($mobile_lrg) {
             margin-top: 40px;

@@ -26,7 +26,8 @@
         }
     }
 
-    &__img {
+    &__img,
+    &__logo {
         margin-bottom: 25px;
 
         @include breakpoint($tablet) {
@@ -37,6 +38,23 @@
 
         @include breakpoint($tablet_lrg) {
             width: 33.333%;
+        }
+    }
+
+    &--three-col {
+        .text-image-list__img,
+        .text-image-list__logo {
+            @include breakpoint($tablet_lrg) {
+                width: 25%;
+            }
+        }
+
+        .text-image-list__content {
+            clear: both;
+
+            @include breakpoint($tablet_lrg) {
+                clear: none;
+            }
         }
     }
 }

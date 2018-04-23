@@ -37,4 +37,10 @@
             }
         }
     }
+
+    &--small {
+        @include breakpoint($tablet) {
+            font-size: 18px;
+        }
+    }
 }

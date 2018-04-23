@@ -41,7 +41,7 @@ h1,
 h2,
 h3 {
     font-family: $fontSecondary;
-    font-weight: 800;
+    font-weight: bold;
 
     &.has-line {
         @include decorateWithLine();
@@ -90,7 +90,7 @@ h3,
 li {
     font-family: $fontPrimary;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: normal;
     line-height: 2.5rem;
     margin: 0 0 10px 0;
 
@@ -103,7 +103,7 @@ li {
 p {
     font-family: $fontPrimary;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: normal;
     line-height: 2.5rem;
     margin: 0 0 20px 0;
 
@@ -121,6 +121,11 @@ p {
             font-size: 2.6rem;
             line-height: 3.5rem;
         }
+    }
+
+    &.smaller {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
     }
 
     a {

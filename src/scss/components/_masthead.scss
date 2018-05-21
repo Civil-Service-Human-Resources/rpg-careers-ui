@@ -50,7 +50,7 @@
                 font-size: 2.6rem;
                 line-height: 3.6rem;
                 margin-left: 25px;
-                top: -8px;
+                top: -9px;
             }
         }
     }
@@ -98,7 +98,7 @@
 
         @include breakpoint($tablet_lrg) {
             float: right;
-            margin-top: 4px;
+            margin-top: -4px;
         }
 
         ul {

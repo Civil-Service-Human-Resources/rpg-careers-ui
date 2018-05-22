@@ -1,93 +1,104 @@
 function debounce(func, wait, immediate) {
-    var timeout;
+    let timeout;
     return function() {
-        var context = this, args = arguments;
-        var later = function() {
+        const context = this, args = arguments;
+        const later = function() {
             timeout = null;
             if (!immediate) func.apply(context, args);
         };
-        var callNow = immediate && !timeout;
+        const callNow = immediate && !timeout;
+
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
+
         if (callNow) func.apply(context, args);
     };
-};
+}
 
-$(document).ready(function () {
+let navInitialised = false;
+let navOpen = false;
 
-    $('.slider').slick({
-        infinite: true,
-        dots: true,
-        slidesToShow: 1,
-        dotsClass: 'slider__nav',
-        prevArrow: '<button type="button" class="slider__prev">Previous</button>',
-        nextArrow: '<button type="button" class="slider__next">Next</button>',
-        autoplay: true,
-        autoplaySpeed: 5000
-    });
+const navEl = document.getElementById('nav');
+const navClosedHtml = '<span class="sr-only">Open </span>menu';
+const navOpenHtml = 'Close <span class="sr-only"> Menu</span>';
+const mobileOverlayEl = document.querySelector('.mobile-overlay');
+const mastheadNavEl = document.querySelector('.masthead__nav');
 
-    var navClosedHtml = '<span class="sr-only">Open </span>menu';
-    var navOpenHtml = 'Close <span class="sr-only"> Menu</span>';
-    var navInitialized = false;
-    var navOpen = false;
-    var navEl = $('#nav');
-    var navToggle = $('<button>').attr({
-        'aria-expanded': false,
-        'aria-controls': 'nav',
-        'class': 'masthead__toggle'
-    }).html(navClosedHtml);
 
-    navToggle.on('click', function (event) {
-        event.preventDefault();
-        navOpen = !navOpen;
-        navToggle.attr('aria-expanded', navOpen).html(navOpen ? navOpenHtml : navClosedHtml);
-        navEl.attr('aria-hidden', !navOpen);
-        $('body').toggleClass('mobile-nav-open');
-    });
+const navToggle = document.createElement('button');
+navToggle.setAttribute('aria-expanded', 'false');
+navToggle.setAttribute('aria-controls', 'nav');
+navToggle.setAttribute('class', 'masthead__toggle');
+navToggle.innerHTML = navClosedHtml;
 
-    $('.mobile-overlay').on('click', function (event) {
-        event.preventDefault();
-        navOpen = false;
-        navEl.attr('aria-hidden', true);
-        $('body').removeClass('mobile-nav-open');
-        navToggle.attr('aria-expanded', false).html(navClosedHtml);
+checkIfNavToggle();
 
-    });
+// EVENT LISTENERS
 
-    checkIfNavToggle();
-    $(window).on('resize', debounce(checkIfNavToggle));
+// listen for user resizing browser window
+window.addEventListener('resize', debounce(checkIfNavToggle));
 
-    function checkIfNavToggle() {
+// someone clicks on the mobile nav toggle
+navToggle.addEventListener('click', (e) => {
+    e.preventDefault();
 
-        var mediaQuery = window.matchMedia('(min-width: 990px)').matches;
+    navOpen = !navOpen;
+    navToggle.setAttribute('aria-expanded', navOpen.toString());
+    navToggle.innerHTML = navOpen ? navOpenHtml : navClosedHtml;
+    navToggle.setAttribute('aria-hidden', !navOpen.toString());
+    document.body.classList.toggle('mobile-nav-open');
+});
 
-        if(!mediaQuery && !navInitialized) {
-            initializeMobileNav();
-        }
+// someone clicks on mobile overlay to close mobile nav
+mobileOverlayEl.addEventListener('click', (e) => {
+    e.preventDefault();
 
-        if(mediaQuery && navInitialized) {
-            uninitializeMobileNav();
-        }
+    navOpen = false;
+    navEl.setAttribute('aria-hidden', true.toString());
+    document.body.classList.remove('mobile-nav-open');
+    navToggle.setAttribute('aria-expanded', false.toString());
+    navToggle.innerHTML = navClosedHtml;
+});
 
-        return false;
+// FUNCTIONS
+
+// add mobile related nav stuff
+function initializeMobileNav() {
+    navOpen = false;
+    navInitialised = true;
+
+    mastheadNavEl.insertBefore(navToggle, mastheadNavEl.firstChild);
+    navEl.setAttribute('aria-hidden', !navOpen.toString());
+}
+
+// remove mobile related nav stuff
+function uninitializeMobileNav() {
+    navOpen = false;
+    navInitialised = false;
+
+    mastheadNavEl.removeChild(navToggle);
+    navEl.removeAttribute('aria-hidden');
+}
+
+// checks whether nav toggle should be shown based on browser width
+function checkIfNavToggle() {
+
+    const mediaQuery = window.matchMedia('(min-width: 990px)').matches;
+
+    if(!mediaQuery && !navInitialised) {
+        initializeMobileNav();
     }
 
-    function initializeMobileNav() {
-        navOpen = false;
-        navInitialized = true;
-
-        navToggle.prependTo('.masthead__nav');
-
-        navEl.attr('aria-hidden', !navOpen);
+    if(mediaQuery && navInitialised) {
+        uninitializeMobileNav();
     }
 
-    function uninitializeMobileNav() {
-        navOpen = false;
-        navInitialized = false;
+    return false;
+}
 
-        navToggle.detach();
-
-        navEl.removeAttr('aria-hidden');
-    }
-
+const slider = tns({
+    container: '.slider',
+    mode: 'gallery',
+    mouseDrag: true,
+    nav: false
 });

@@ -1,0 +1,23 @@
+{
+  "name": "tiny-slider",
+  "version": "2.6.0",
+  "description": "Vanilla javascript slider for all purposes, inspired by Owl Carousel.",
+  "main": "dist/tiny-slider.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganlanyuan/tiny-slider.git"
+  },
+  "keywords": [],
+  "author": "ganlanyuan <ganlanyuan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ganlanyuan/tiny-slider/issues"
+  },
+  "homepage": "https://github.com/ganlanyuan/tiny-slider#readme"
+}

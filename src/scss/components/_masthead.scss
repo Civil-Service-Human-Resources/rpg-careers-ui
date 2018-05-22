@@ -135,13 +135,24 @@
         }
 
         a {
-            color: $defaultTextColor;
             display: block;
             padding: 20px;
             text-decoration: none;
 
             @include breakpoint($tablet_lrg) {
                 padding: 0;
+            }
+
+            &:visited {
+                color: $defaultTextColor;
+            }
+
+            &:link {
+                color: $defaultTextColor;
+            }
+
+            &:hover {
+                text-decoration: underline;
             }
         }
     }

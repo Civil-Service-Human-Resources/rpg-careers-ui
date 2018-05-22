@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" href="/style.css">
 
-    <script src="/assets/js/vendor/modernizr/modernizr-custom.js"></script>
-
     <!--[if lt IE 9]>
         <script src="/assets/js/vendor/respond/src/respond.js"></script>
         <script src="/assets/js/vendor/rem/rem.js"></script>
@@ -40,13 +38,21 @@
         <nav class="masthead__nav">
             <ul class="masthead__menu" id="nav">
                 <li><a href="">Home</a></li>
-                <li class="masthead__nav-current"><a href="">Departments</a></li>
+                <li class="masthead__nav-current"><a href="" aria-current="page">Departments</a></li>
                 <li><a href="">About the Civil Service</a></li>
                 <li><a href="">Areas of Work</a></li>
             </ul>
         </nav>
     </header>
     <!-- /masthead -->
+
+    <!-- beta banner -->
+    <div class="beta-banner">
+        <div class="beta-banner__inner">
+            <p>This is a pre-release version of our website. Your <a href="#">feedback</a> will help us to improve.</p>
+        </div>
+    </div>
+    <!-- /beta banner -->
 
     <!-- banner -->
     <div class="banner">
@@ -208,9 +214,9 @@
             </div>
             <!-- /section-intro-->
 
-            <div class="content-two-col__inner">
+            <div class="content-two-col__inner blog-articles">
                 <div class="content-two-col__first">
-                    <div class="cta">
+                    <div class="cta cta--blog">
                         <img class="cta__img" src="https://placebear.com/900/600" alt="Image alt here">
                         <div class="cta__content">
                             <h3 class="cta__title"><a href="">Bettys &amp; Taylors of Harrogate win their third Queen's Award for Sustainable Development</a></h3>
@@ -219,7 +225,7 @@
                     </div>
                 </div>
                 <div class="content-two-col__last">
-                    <div class="cta">
+                    <div class="cta cta--blog">
                         <img class="cta__img" src="https://placebear.com/900/600" alt="Image alt here">
                         <div class="cta__content">
                             <h3 class="cta__title"><a href="">This is a short title</a></h3>

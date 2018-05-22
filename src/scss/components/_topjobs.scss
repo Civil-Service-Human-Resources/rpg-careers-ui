@@ -1,0 +1,63 @@
+.topjobs {
+    @include clearfix;
+    background-color: #FFF;
+    text-align: center;
+
+    p {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+
+        @include breakpoint($mobile_lrg) {
+            font-size: 2.2rem;
+            line-height: 1.25;
+            text-align: left;
+        }
+    }
+
+    &__inner {
+        padding: 17px 20px;
+
+        @include breakpoint($mobile_lrg) {
+            display: flex;
+            padding-right: 40px;
+            padding-left: 60px;
+        }
+
+        @include breakpoint($tablet) {
+            padding-right: 40px;
+            padding-left: 113px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 17px;
+
+        @include breakpoint($mobile_lrg) {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        p {
+            @include breakpoint($mobile_lrg) {
+                padding-right: 40px;
+            }
+        }
+    }
+
+    &__link {
+        @include breakpoint($mobile_lrg) {
+            flex-basis: 330px;
+            text-align: right;
+            width: 330px;
+        }
+
+        .button {
+            @include breakpoint($mobile_lrg) {
+                width: 330px;
+            }
+        }
+    }
+}

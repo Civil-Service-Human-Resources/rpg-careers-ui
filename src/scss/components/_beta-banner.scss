@@ -1,0 +1,19 @@
+.beta-banner {
+    background-color: #D6E8F2;
+    padding: 5px 20px 5px 20px;
+
+    @include breakpoint($mobile_lrg) {
+        padding-right: 40px;
+        padding-left: 60px;
+    }
+
+    @include breakpoint($tablet) {
+        padding-right: 40px;
+        padding-left: 113px;
+    }
+
+    p {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+}

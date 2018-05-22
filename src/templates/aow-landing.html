@@ -9,11 +9,10 @@
 
     <link rel="stylesheet" href="/style.css">
 
-    <script src="/assets/js/vendor/modernizr/modernizr-custom.js"></script>
-
     <!--[if lt IE 9]>
         <script src="/assets/js/vendor/respond/src/respond.js"></script>
         <script src="/assets/js/vendor/rem/rem.js"></script>
+        <script src="/assets/js/vendor/tiny-slider/dist/min/tiny-slider.helper.ie8.js"></script>
     <![endif]-->
 
 </head>
@@ -38,7 +37,7 @@
         </div>
         <nav class="masthead__nav">
             <ul class="masthead__menu" id="nav">
-                <li class="masthead__nav-current"><a href="">Home</a></li>
+                <li class="masthead__nav-current"><a href="" aria-current="page">Home</a></li>
                 <li><a href="">Departments</a></li>
                 <li><a href="">About the Civil Service</a></li>
                 <li><a href="">Areas of Work</a></li>
@@ -46,6 +45,14 @@
         </nav>
     </header>
     <!-- /masthead -->
+
+    <!-- beta banner -->
+    <div class="beta-banner">
+        <div class="beta-banner__inner">
+            <p>This is a pre-release version of our website. Your <a href="#">feedback</a> will help us to improve.</p>
+        </div>
+    </div>
+    <!-- /beta banner -->
 
     <div class="hero-text">
         <div class="hero-text__inner">
@@ -184,6 +191,7 @@
     <span class="mobile-overlay"></span>
 
     <script src="/assets/js/vendor/picturefill/picturefill.min.js"></script>
+    <script src="/assets/js/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
     <script src="/assets/js/scripts.js"></script>
 
 </body>

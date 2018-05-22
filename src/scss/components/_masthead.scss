@@ -1,6 +1,7 @@
 .masthead {
     @include clearfix;
     background-color: white;
+    border-bottom: 1px solid $defaultLineColor;
     height: 80px;
     padding: 30px 0;
     position: relative;
@@ -85,11 +86,6 @@
         @include breakpoint($tablet) {
             margin-top: -7px;
         }
-
-        &:focus {
-            box-shadow: 0 0 0 3px $orange;
-            outline: 0;
-        }
     }
 
     &__nav {
@@ -143,12 +139,6 @@
             display: block;
             padding: 20px;
             text-decoration: none;
-
-            &:active,
-            &:focus {
-                background-color: $orange;
-                outline: 0;
-            }
 
             @include breakpoint($tablet_lrg) {
                 padding: 0;

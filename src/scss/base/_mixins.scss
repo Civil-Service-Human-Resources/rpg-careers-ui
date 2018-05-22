@@ -1,7 +1,7 @@
 @mixin focus-state($offset: 0) {
     background-color: transparent;
-    outline: 3px solid #ffbf47;
-    outline-offset: $offset;
+    //outline: 3px solid #ffbf47;
+    //outline-offset: $offset;
 }
 
 @mixin clearfix {

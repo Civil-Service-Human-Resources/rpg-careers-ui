@@ -9,11 +9,10 @@
 
     <link rel="stylesheet" href="/style.css">
 
-    <script src="/assets/js/vendor/modernizr/modernizr-custom.js"></script>
-
     <!--[if lt IE 9]>
         <script src="/assets/js/vendor/respond/src/respond.js"></script>
         <script src="/assets/js/vendor/rem/rem.js"></script>
+        <script src="/assets/js/vendor/tiny-slider/dist/min/tiny-slider.helper.ie8.js"></script>
     <![endif]-->
 
 </head>
@@ -38,7 +37,7 @@
         </div>
         <nav class="masthead__nav">
             <ul class="masthead__menu" id="nav">
-                <li class="masthead__nav-current"><a href="">Home</a></li>
+                <li class="masthead__nav-current"><a href="" aria-current="page">Home</a></li>
                 <li><a href="">Areas of work</a></li>
                 <li><a href="">Departments</a></li>
                 <li><a href="">Our community</a></li>
@@ -47,6 +46,27 @@
         </nav>
     </header>
     <!-- /masthead -->
+
+    <!-- top job link -->
+    <div class="topjobs">
+        <div class="topjobs__inner">
+            <div class="topjobs__text">
+                <p>Interested in knowing what jobs are available?</p>
+            </div>
+            <div class="topjobs__link">
+                <a href="#" class="button">Find a Civil Service job</a>
+            </div>
+        </div>
+    </div>
+    <!-- /top job link -->
+
+    <!-- beta banner -->
+    <div class="beta-banner">
+        <div class="beta-banner__inner">
+            <p>This is a pre-release version of our website. Your <a href="#">feedback</a> will help us to improve.</p>
+        </div>
+    </div>
+    <!-- /beta banner -->
 
     <!-- hero -->
     <div class="hero">
@@ -69,7 +89,12 @@
                     <h2>Our Departments</h2>
                     <p>Running the UK is complicated. That’s why the Civil Service is divided into departments, which deal with areas such as education, health and defence. A lot of departments will have their own agencies dealing with specialist subjects. </p>
                     <p>Whatever your passion – from the environment to culture, there’s a department or agency to match.</p>
-                    <p><a href="#" class="button button--smaller">Discover Departments</a></p>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3 - Whatever your passion – from the environment to culture, there’s a department or agency to match.</li>
+                    </ul>
+                    <p><a href="#" class="readmore-link">Discover Departments</a></p>
                 </div>
                 <div class="content-two-col__last">
                     <div class="aside aside--img-top aside--tertiary">
@@ -94,7 +119,7 @@
                 <div class="content-two-col__first">
                     <h2>Our Professions</h2>
                     <p>Every Civil Service job is also part of a ‘profession’ – everything from legal and IT to HR or service delivery. Your profession offers networking opportunities and training and development programmes – plus the chance to work on major cross-government projects.</p>
-                    <p><a href="#" class="button button--smaller">Discover Professions</a></p>
+                    <p><a href="#" class="readmore-link">Discover Professions</a></p>
                 </div>
                 <div class="content-two-col__last">
                     <div class="image">
@@ -169,6 +194,7 @@
     <span class="mobile-overlay"></span>
 
     <script src="/assets/js/vendor/picturefill/picturefill.min.js"></script>
+    <script src="/assets/js/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
     <script src="/assets/js/scripts.js"></script>
 
 </body>

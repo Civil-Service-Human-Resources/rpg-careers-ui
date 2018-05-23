@@ -21,4 +21,13 @@
     &:after {
         right: 6px;
     }
+
+    .smaller & {
+        &:before,
+        &:after {
+            height: .7rem;
+            top: 7px;
+            width: .7rem;
+        }
+    }
 }

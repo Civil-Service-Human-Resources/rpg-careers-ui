@@ -127,10 +127,6 @@ p {
         font-size: 1.6rem;
         line-height: 2.1rem;
     }
-
-    a {
-        text-decoration: underline;
-    }
 }
 
 blockquote {
@@ -183,7 +179,7 @@ main {
 
     ul, ol {
         list-style-type: disc;
-        margin-left: 20px;
+        margin: 0 0 20px 20px;
         padding-left: 20px;
     }
 

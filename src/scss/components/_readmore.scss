@@ -1,6 +1,24 @@
 .readmore-link {
-    background: url(/assets/images/icon-arrow.svg) left 4px no-repeat;
-    background-size: auto 18px;
     font-family: $fontSecondary;
-    padding-left: 26px;
+    position: relative;
+    padding-right: 17px;
+
+    &:before,
+    &:after {
+        content: '';
+        border: 2px solid $blue;
+        border-left: 0;
+        border-bottom: 0;
+        display: inline-block;
+        width: .9rem;
+        height: .9rem;
+        position: absolute;
+        right: 0;
+        top: 9px;
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        right: 6px;
+    }
 }

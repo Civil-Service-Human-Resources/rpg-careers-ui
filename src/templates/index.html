@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="/style.css">
 
+    <!--[if lte IE 9]>
+        <script src="/assets/js/vendor/matchmedia/matchmedia.js"></script>
+        <script src="/assets/js/vendor/flexibility/flexibility.js"></script>
+    <![endif]-->
+
     <!--[if lt IE 9]>
         <script src="/assets/js/vendor/respond/src/respond.js"></script>
         <script src="/assets/js/vendor/rem/rem.js"></script>
@@ -70,8 +75,8 @@
 
     <!-- hero -->
     <div class="hero">
-        <div class="hero__inner">
-            <div class="hero__img" style="background-image: url(/assets/images/hero-banner-arms.png)"></div>
+        <div class="hero__inner" style="background-image: url(/assets/images/hero-banner-arms.png)">
+            <span class="hero__img" style="background-image: url(/assets/images/hero-banner-arms.png)"></span>
             <div class="hero__content">
                 <h1 class="oversized has-line">Discover careers in the Civil Service</h1>
                 <p class="intro">The Civil Service is changing. We’re finding new ways to serve the public, work more efficiently and make government more transparent. And we’re making the Civil Service a truly great place to work.</p>
@@ -94,7 +99,7 @@
                         <li>Item 2</li>
                         <li>Item 3 - Whatever your passion – from the environment to culture, there’s a department or agency to match.</li>
                     </ul>
-                    <p><a href="#" class="readmore-link">Discover Departments</a></p>
+                    <p><a href="#" class="readmore-link">Discover departments</a></p>
                 </div>
                 <div class="content-two-col__last">
                     <div class="aside aside--img-top aside--tertiary">
@@ -119,7 +124,7 @@
                 <div class="content-two-col__first">
                     <h2>Our Professions</h2>
                     <p>Every Civil Service job is also part of a ‘profession’ – everything from legal and IT to HR or service delivery. Your profession offers networking opportunities and training and development programmes – plus the chance to work on major cross-government projects.</p>
-                    <p><a href="#" class="readmore-link">Discover Professions</a></p>
+                    <p><a href="#" class="readmore-link">Discover professions</a></p>
                 </div>
                 <div class="content-two-col__last">
                     <div class="image">
@@ -132,8 +137,7 @@
 
         <!-- hero - map -->
         <div class="hero hero--where-to-find">
-            <div class="hero__inner">
-                <div class="hero__img" style="background-image: url(/assets/images/map.svg)"></div>
+            <div class="hero__inner" style="background-image: url(/assets/images/map.svg)">
                 <div class="hero__content">
                     <h2>Where you'll find us</h2>
                     <p>We’re everywhere. You’ll find locations right across the UK – a far cry from the cliché of the  bowler-hatted Westminster civil servant. In fact, just 18% of our jobs are based in London.</p>

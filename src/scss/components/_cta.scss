@@ -1,26 +1,12 @@
 .cta {
     @include clearfix;
-    background-color: $white;
-    border: 1px solid $grey2;
-    margin-bottom: 40px;
+
 
     &__content {
         padding: 30px 20px 10px;
 
         @include breakpoint($mobile_lrg) {
             padding: 30px 30px 10px;
-        }
-    }
-
-    &--blog {
-        .cta__content {
-            @include breakpoint($mobile_lrg) {
-                height: 350px;
-            }
-
-            @include breakpoint($tablet) {
-                height: 330px;
-            }
         }
     }
 

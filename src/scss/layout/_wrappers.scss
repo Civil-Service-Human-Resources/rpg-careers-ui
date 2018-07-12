@@ -17,4 +17,44 @@
             color: #fff;
         }
     }
+
+    &--white {
+        background-color: $white;
+        margin: 0 -20px 40px -20px;
+        padding: 40px 40px 20px 40px;
+
+        @include breakpoint($mobile_lrg) {
+            margin: 0 -40px 40px -40px;
+            padding: 40px;
+        }
+
+        .content-two-col--middle-align {
+            img {
+                margin-bottom: 40px;
+                width: 100%;
+                height: auto;
+                @include breakpoint($mobile_lrg) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .content-two-col {
+            @include breakpoint($mobile_lrg) {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    &--grey {
+        background-color: $grey3;
+        padding: 40px 40px 0 40px;
+        margin-bottom: 45px;
+
+        .content-two-col__first {
+            margin-bottom: 45px;
+        }
+    }
 }
+

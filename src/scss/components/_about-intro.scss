@@ -1,0 +1,46 @@
+.about-intro {
+  background-color: $intro-background;
+  margin: 0 -20px;
+
+  @include breakpoint($tablet) {
+    margin: 0 -40px;
+  }
+
+  .department-intro {
+    margin-left: 0;
+    margin-right: 0;
+
+    padding-bottom: 0;
+    margin-bottom: 0;
+    @include breakpoint($tablet) {
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  .department-intro__head {
+    margin: 0;
+  }
+
+  .department-intro__content {
+    padding-top: 0;
+    @include breakpoint($mobile_lrg) {
+      padding-top: 170px;
+    }
+  }
+
+  .content-two-col {
+    margin-bottom: 0;
+    padding-bottom: 40px;
+    &__inner {
+      padding-right: 40px;
+      padding-left: 40px;
+      color: $white;
+      @include breakpoint($tablet) {
+        margin: 0;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+}

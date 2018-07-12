@@ -9,6 +9,10 @@
 
     .aside__content {
         overflow: hidden;
+
+      footer.alt-footer-line {
+        @include decorateWithLine(#fff, before, 1px);
+      }
     }
 
     &__inner {
@@ -58,6 +62,8 @@
                 }
             }
         }
+
+
     }
 
     &--img-right {
@@ -73,6 +79,21 @@
                 padding: 0 20px 0 0;
                 width: 50%;
             }
+        }
+    }
+
+    &--sub {
+        margin-top: 45px;
+    }
+
+    &--white {
+        background-color: $white;
+        padding-top: 0;
+        .image {
+            margin: 0;
+        }
+        .aside__inner {
+            background: none;
         }
     }
 }

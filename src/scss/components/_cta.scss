@@ -1,7 +1,6 @@
 .cta {
     @include clearfix;
 
-
     &__content {
         padding: 30px 20px 10px;
 
@@ -10,4 +9,12 @@
         }
     }
 
+    &--arrow-link {
+        position: relative;
+        font-size: 2.4rem;
+        text-decoration: underline;
+        &:after {
+            content: "  >>";
+        }
+    }
 }

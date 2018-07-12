@@ -11,4 +11,12 @@
     @include breakpoint($tablet_lrg) {
         height: 500px;
     }
+
+    .department-intro {
+        padding: 0;
+    }
+
+    .content {
+        background: #000;
+    }
 }

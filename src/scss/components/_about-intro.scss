@@ -1,5 +1,5 @@
 .about-intro {
-  background-color: $intro-background;
+  background-color: $about-intro;
   margin: 0 -20px;
 
   @include breakpoint($tablet) {
@@ -9,7 +9,7 @@
   .department-intro {
     margin-left: 0;
     margin-right: 0;
-
+    background-color: $about-intro;
     padding-bottom: 0;
     margin-bottom: 0;
     @include breakpoint($tablet) {

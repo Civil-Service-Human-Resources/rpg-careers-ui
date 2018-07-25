@@ -18,22 +18,40 @@ body {
 a {
     -webkit-tap-highlight-color: rgba(0,0,0,0.3);
     color: $defaultLinkColor;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:visited {
-        color: $defaultLinkColor;
+        color: $defaultVisitedLinkColor;
+
+        &:before,
+        &:after {
+          border-color: $defaultVisitedLinkColor;
+        }
     }
 
     &:link {
         color: $defaultLinkColor;
+
+        &:before,
+        &:after {
+          border-color: $defaultLinkColor;
+        }
     }
 
     &:focus {
-
+      color: $defaultFocusLinkColor;
+      &:before,
+      &:after {
+        border-color: $defaultFocusLinkColor;
+      }
     }
 
     &:hover {
-        text-decoration: underline;
+      color: $defaultHoverLinkColor;
+      &:before,
+      &:after {
+        border-color: $defaultHoverLinkColor;
+      }
     }
 }
 

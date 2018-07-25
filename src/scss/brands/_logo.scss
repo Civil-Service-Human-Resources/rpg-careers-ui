@@ -21,16 +21,18 @@
 
     &--horizontal {
         background-position: 5px center;
-        background-size: auto 100%;
+        background-size: 50px;
+        height: 36px;
         padding: 2px 7px 2px 38px;
 
         @include breakpoint($tablet) {
             background-position: 10px center;
-            padding: 8px 10px 8px 71px;
+            padding: 8px 10px 8px 39px;
         }
 
         .logo__text {
-            top: 1px;
+            top: 8px;
+            left: 30px;
 
             @include breakpoint($tablet) {
                 top: 0;

@@ -2,13 +2,14 @@
     @include clearfix;
     background-color: #FFF;
     text-align: center;
+    font-family: $fontSecondary;
 
     p {
         font-size: 1.6rem;
         margin-bottom: 0;
 
         @include breakpoint($mobile_lrg) {
-            font-size: 2.2rem;
+            font-size: 2rem;
             line-height: 1.25;
             text-align: left;
         }

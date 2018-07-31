@@ -6,14 +6,14 @@
     padding: 30px 0;
     position: relative;
     z-index: 1001;
-    display: flex;
 
     @include breakpoint($mobile_sml) {
         height: 70px;
     }
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet_lrg) {
         height: 80px;
+        display: flex;
     }
 
     &__brand {

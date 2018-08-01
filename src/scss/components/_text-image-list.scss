@@ -80,4 +80,25 @@
             }
         }
     }
+
+    &__title {
+        border-left: 3px solid $red;
+        color: $defaultTextColor;
+        display: inline-block;
+        font: 400 17px/25px Helvetica, Arial;
+        line-height: 1.15;
+        padding: 0 0 0 10px;
+        text-decoration: none;
+
+        img {
+            height: 40px;
+            width: auto;
+            float: left;
+        }
+
+        .logo__text {
+            float: left;
+        }
+
+    }
 }

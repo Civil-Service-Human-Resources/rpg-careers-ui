@@ -1,9 +1,8 @@
 .tns-outer{
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     max-width: 1080px;
     padding:0 !important;
-    margin-bottom: 50px;
     position: relative;
 }
 
@@ -248,6 +247,7 @@
     position: relative;
     height: 370px;
     width: 100% !important;
+    margin: 0 auto 50px auto;
 
     img {
         border: 1px solid;

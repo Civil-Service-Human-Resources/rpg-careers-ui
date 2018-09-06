@@ -205,3 +205,64 @@ main {
         list-style-type: decimal;
     }
 }
+
+#department-filter-js {
+    display: flex !important;
+    visibility: visible !important;
+}
+
+.department-filter {
+    display: none;
+    visibility: hidden;
+    flex-direction: row;
+    align-items: flex-end;
+    @media (max-width: 820px) {
+        flex-direction: column;
+    }
+
+    .department-filter__input-col {
+        display: flex;
+        width: 62%;
+        padding-bottom: 40px;
+
+        @media (max-width: 820px) {
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            @media (max-width: 820px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .department-filter__count-col {
+        display: flex;
+        width: 38%;
+        align-items: baseline;
+        padding-bottom: 20px;
+        @media (max-width: 820px) {
+            width: 100%;
+        }
+
+        span {
+            font-size: 5rem;
+            margin-right: 10px;
+            font-weight: 600;
+        }
+
+    }
+
+    input {
+        appearance: none;
+        font-size: 20px !important;
+        padding: 10px 10px 13px 10px;
+        border: 1px solid #DEDEDE;
+        min-width: 300px;
+        @media (max-width: 820px) {
+            width: 100%;
+        }
+    }
+}

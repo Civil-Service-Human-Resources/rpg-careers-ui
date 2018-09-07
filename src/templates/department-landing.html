@@ -91,7 +91,10 @@
                         <div class="department-filter__input-col">
                             <form>
                                 <h3>Find a department</h3>
-                                <input type="search" id="department-filter-input">
+                                <div class="department-filter__inputs">
+                                    <input type="text" id="department-filter-input">
+                                    <button type="reset" id="department-filter-reset">X</button>
+                                </div>
                             </form>
                         </div>
 
@@ -101,7 +104,10 @@
                     </div>
 
                     <ul class="text-image-list text-image-list--three-col">
-                        <li class="list-item" data-filter="department-for-strategy">
+                        <div id="department-filter__error">
+                            <p>There are no departments that match your criteria</p>
+                        </div>
+                        <li class="list-item" data-acronym="DFA" data-filter="department-for-strategy">
                             <a href="#" class="text-image-list__item">
                                 <div class="text-image-list__img">
                                     <img src="https://placebear.com/900/600" alt="Image alt here">
@@ -109,7 +115,7 @@
                                 <div class="text-image-list__logo">
                                     <span class="text-image-list__title">
                                         <img src="https://placebear.com/100/100" alt="Logo for Department for Business, Energy and Industrial Strategy">
-                                        <span class="logo__text">Department for Strategy</span>
+                                        <span class="logo__text">Department for All | DFA</span>
                                     </span>
                                 </div>
                                 <div class="text-image-list__content">
@@ -121,7 +127,7 @@
                             </a>
                         </li>
 
-                        <li class="list-item" data-filter="department-for-something">
+                        <li class="list-item" data-acronym="DFS" data-filter="department-for-something">
                             <a href="#" class="text-image-list__item">
                                 <div class="text-image-list__img">
                                     <img src="https://placebear.com/900/600" alt="Image alt here">
@@ -129,7 +135,7 @@
                                 <div class="text-image-list__logo">
                                     <span class="text-image-list__title">
                                         <img src="https://placebear.com/100/100" alt="Logo for Department for Business, Energy and Industrial Strategy">
-                                        <span class="logo__text">Department for Something</span>
+                                        <span class="logo__text">Department for Something | DFS</span>
                                     </span>
                                 </div>
                                 <div class="text-image-list__content">
@@ -141,7 +147,7 @@
                             </a>
                         </li>
 
-                        <li class="list-item" data-filter="department-of-web">
+                        <li class="list-item" data-acronym="DOW" data-filter="department-of-web">
                             <a href="#" class="text-image-list__item">
                                 <div class="text-image-list__img">
                                     <img src="https://placebear.com/900/600" alt="Image alt here">
@@ -149,7 +155,7 @@
                                 <div class="text-image-list__logo">
                                     <span class="text-image-list__title">
                                         <img src="https://placebear.com/100/100" alt="Logo for Department for Business, Energy and Industrial Strategy">
-                                        <span class="logo__text">Department of Web</span>
+                                        <span class="logo__text">Department of Web | DOW</span>
                                     </span>
                                 </div>
                                 <div class="text-image-list__content">
@@ -161,7 +167,7 @@
                             </a>
                         </li>
 
-                        <li class="list-item" data-filter="department-for-sport">
+                        <li class="list-item" data-acronym="DFS" data-filter="department-for-sport">
                             <a href="#" class="text-image-list__item">
                                 <div class="text-image-list__img">
                                     <img src="https://placebear.com/900/600" alt="Image alt here">
@@ -169,7 +175,7 @@
                                 <div class="text-image-list__logo">
                                     <span class="text-image-list__title">
                                         <img src="https://placebear.com/100/100" alt="Logo for Department for Business, Energy and Industrial Strategy">
-                                        <span class="logo__text">Department for Sport</span>
+                                        <span class="logo__text">Department for Sport | DFS</span>
                                     </span>
                                 </div>
                                 <div class="text-image-list__content">
@@ -181,7 +187,7 @@
                             </a>
                         </li>
 
-                        <li class="list-item" data-filter="department-for-business-energy-industrial-strategy">
+                        <li class="list-item" data-acronym="BEI" data-filter="department-for-business-energy-industrial-strategy">
                             <a href="#" class="text-image-list__item">
                                 <div class="text-image-list__img">
                                     <img src="https://placebear.com/900/600" alt="Image alt here">
@@ -189,7 +195,7 @@
                                 <div class="text-image-list__logo">
                                     <span class="text-image-list__title">
                                         <img src="https://placebear.com/100/100" alt="Logo for Department for Business, Energy and Industrial Strategy">
-                                        <span class="logo__text">Department for Business, Energy & Industrial Strategy</span>
+                                        <span class="logo__text">Department for Business, Energy & Industrial Strategy | BEI</span>
                                     </span>
                                 </div>
                                 <div class="text-image-list__content">
@@ -201,7 +207,7 @@
                             </a>
                         </li>
 
-                        <li class="list-item"  data-filter="department-for-energy">
+                        <li class="list-item" data-acronym="DE"  data-filter="department-for-energy">
                             <a href="#" class="text-image-list__item">
                                 <div class="text-image-list__img">
                                     <img src="https://placebear.com/900/600" alt="Image alt here">
@@ -209,7 +215,7 @@
                                 <div class="text-image-list__logo">
                                     <span class="text-image-list__title">
                                         <img src="https://placebear.com/100/100" alt="Logo for Department for Business, Energy and Industrial Strategy">
-                                        <span class="logo__text">Department for Energy</span>
+                                        <span class="logo__text">Department for Energy | DE</span>
                                     </span>
                                 </div>
                                 <div class="text-image-list__content">
@@ -285,13 +291,25 @@
         const input = document.getElementById('department-filter-input');
         const number = document.getElementById('filter-count');
         const list = document.getElementsByClassName('list-item');
+        const reset = document.getElementById('department-filter-reset');
         let count = list.length;
 
         number.innerHTML = count;
 
+        reset.addEventListener("click", () => {
+            [].forEach.call(list, function (el) {
+                el.style.display = "block";
+                number.innerHTML = list.length.toString();
+            });
+        });
+
         input.addEventListener("keyup", () => {
             [].forEach.call(list, function (el, index) {
-                if(el.dataset.filter.includes(input.value.replace(/\s+/g, "-").toLowerCase())) {
+                if(
+                    el.dataset.filter.includes(input.value.replace(/\s+/g, "-").toLowerCase())
+                    ||
+                    el.dataset.acronym.includes(input.value.replace(/\s+/g, "-").toUpperCase())
+                ) {
                     el.style.display = "block";
                 } else {
                     el.style.display = "none";
@@ -309,6 +327,11 @@
             });
 
             number.innerHTML = count;
+            if(count === 0) {
+                document.getElementById('department-filter__error').classList.add('show');
+            } else {
+                document.getElementById('department-filter__error').classList.remove('show');
+            }
         });
     </script>
 

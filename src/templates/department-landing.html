@@ -93,13 +93,16 @@
                                 <h3>Find a department</h3>
                                 <div class="department-filter__inputs">
                                     <input type="text" id="department-filter-input">
-                                    <button type="reset" id="department-filter-reset">X</button>
+                                    <noscript>
+                                        <button type="submit" id="department-filter-find" class="button button--square">Find</button>
+                                    </noscript>
+                                    <button type="reset" id="department-filter-reset">Clear</button>
                                 </div>
                             </form>
                         </div>
 
                         <div class="department-filter__count-col">
-                            <span id="filter-count">3</span> Departments
+                            <span id="filter-count">6</span> Departments
                         </div>
                     </div>
 
@@ -287,7 +290,6 @@
 
 
     <script>
-        document.getElementById('department-filter').setAttribute('id', 'department-filter-js');
         const input = document.getElementById('department-filter-input');
         const number = document.getElementById('filter-count');
         const list = document.getElementsByClassName('list-item');
